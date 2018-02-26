@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="vsanabriageo">
+  <title>CECTEC - SAN RAFAEL</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">CECTEC</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Proyecto San Rafael">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Proyecto San Rafael</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mapa">
+          <a class="nav-link" href="maps.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Mapa</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tablas">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Tablas</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Proyecto San Rafael</a>
+        </li>
+        <li class="breadcrumb-item active">Tabla</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Registro de Familias Beneficiarias</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                                <tr>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>CIN</th>
+                    <th>Nro_ENCUES</th>
+                    <th>SEXO</th>
+                    <th>EDAD</th>
+                    <th>EDUCACION</th>
+                    <th>LOCALIDAD</th>
+                    <th>SUP_HA</th>
+                    <th>AG_FOREST</th>
+                    <th>SILVO_PAST</th>
+                    <th>ENR_BOSQ</th>
+                    <th>PCHIDRO</th>
+                    <th>CN_T</th>
+                    <th>APICULT</th>
+                    <th>MSAV</th>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>ID</th>
+                </tr>
+
+
+            </thead>
+            <tbody>
+                                <tr>
+                    <td>Blas</td>
+                    <td>Niz</td>
+                    <td>103</td>
+                    <td>103</td>
+                    <td>Hombre</td>
+                    <td>57</td>
+                    <td>Tercero</td>
+                    <td>San Miguelito</td>
+                    <td>0.9737</td>
+                    <td>NULL</td>
+                    <td>0.75</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>0.25</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647833.6187</td>
+                    <td>7090500.569</td>
+                    <td>0                    </td>
+                </tr>
+
+                <tr>
+                    <td>Armando</td>
+                    <td>Morel</td>
+                    <td>165</td>
+                    <td>165</td>
+                    <td>Hombre</td>
+                    <td>23</td>
+                    <td>SD</td>
+                    <td>2 de Marzo</td>
+                    <td>6.2893</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>643990.256931</td>
+                    <td>7094661.78964</td>
+                    <td>134                    </td>
+                </tr>
+
+                <tr>
+                    <td>Aparicio</td>
+                    <td>Báez Ortiz</td>
+                    <td>2110111</td>
+                    <td>168</td>
+                    <td>Hombre</td>
+                    <td>48</td>
+                    <td>Segundo</td>
+                    <td>2 de Marzo</td>
+                    <td>5.2896</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>140</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>643280.1438</td>
+                    <td>7093819.472</td>
+                    <td>67                    </td>
+                </tr>
+
+                <tr>
+                    <td>Edith Esther</td>
+                    <td>Sanabria</td>
+                    <td>3634502</td>
+                    <td>104</td>
+                    <td>Mujer</td>
+                    <td>39</td>
+                    <td>Sexto</td>
+                    <td>2 de Marzo</td>
+                    <td>7.417</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>0.25</td>
+                    <td>644735.6917</td>
+                    <td>7093839.65</td>
+                    <td>68                    </td>
+                </tr>
+
+                <tr>
+                    <td>Leonor</td>
+                    <td>Maciel</td>
+                    <td>160</td>
+                    <td>160</td>
+                    <td>Hombre</td>
+                    <td>43</td>
+                    <td>Segundo</td>
+                    <td>San Miguelito</td>
+                    <td>6.6488</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646835.9741</td>
+                    <td>7091041.597</td>
+                    <td>3                    </td>
+                </tr>
+
+                <tr>
+                    <td>Antolin</td>
+                    <td>Fernández</td>
+                    <td>2864257</td>
+                    <td>203</td>
+                    <td>Hombre</td>
+                    <td>72</td>
+                    <td>SN</td>
+                    <td>San Miguelito</td>
+                    <td>6.3162</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646894.0186</td>
+                    <td>7091099.133</td>
+                    <td>4                    </td>
+                </tr>
+
+                <tr>
+                    <td>Hugo</td>
+                    <td>González</td>
+                    <td>4090187</td>
+                    <td>174</td>
+                    <td>Hombre</td>
+                    <td>38</td>
+                    <td>Sexto</td>
+                    <td>San Miguelito</td>
+                    <td>8.746</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>200</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646861.1406</td>
+                    <td>7091137.078</td>
+                    <td>5                    </td>
+                </tr>
+
+                <tr>
+                    <td>Dionisio</td>
+                    <td>Ríos</td>
+                    <td>5401949</td>
+                    <td>228</td>
+                    <td>Hombre</td>
+                    <td>26</td>
+                    <td>Cuarto</td>
+                    <td>San Miguelito</td>
+                    <td>6.1076</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>25</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646676.771415</td>
+                    <td>7091413.93992</td>
+                    <td>7                    </td>
+                </tr>
+
+                <tr>
+                    <td>Cecilio</td>
+                    <td>Miranda</td>
+                    <td>10000001</td>
+                    <td>NULL</td>
+                    <td>Hombre</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>San Sebastián</td>
+                    <td>1.2916</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647389.033</td>
+                    <td>7097289.409</td>
+                    <td>209                    </td>
+                </tr>
+
+                <tr>
+                    <td>Benito</td>
+                    <td>Del Valle</td>
+                    <td>156</td>
+                    <td>156</td>
+                    <td>Hombre</td>
+                    <td>57</td>
+                    <td>SN</td>
+                    <td>1ro de Marzo</td>
+                    <td>47.2243</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>NULL</td>
+                    <td>600</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>0.5</td>
+                    <td>647776.7891</td>
+                    <td>7094048.237</td>
+                    <td>76                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sergio</td>
+                    <td>Ríos</td>
+                    <td>5761964</td>
+                    <td>163</td>
+                    <td>Hombre</td>
+                    <td>31</td>
+                    <td>Quinto</td>
+                    <td>2 de Marzo</td>
+                    <td>7.3685</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>50</td>
+                    <td>0.5</td>
+                    <td>2</td>
+                    <td>NULL</td>
+                    <td>644414.0</td>
+                    <td>7094067.0</td>
+                    <td>77                    </td>
+                </tr>
+
+                <tr>
+                    <td>Félix</td>
+                    <td>Ayala</td>
+                    <td>232</td>
+                    <td>232</td>
+                    <td>Hombre</td>
+                    <td>39</td>
+                    <td>Sexto</td>
+                    <td>1ro de Marzo</td>
+                    <td>8.6497</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647416.0</td>
+                    <td>7095025.0</td>
+                    <td>151                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nildo</td>
+                    <td>González</td>
+                    <td>2297820</td>
+                    <td>159</td>
+                    <td>Hombre</td>
+                    <td>42</td>
+                    <td>Quinto</td>
+                    <td>2 de Marzo</td>
+                    <td>13.3023</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>0.5</td>
+                    <td>5</td>
+                    <td>NULL</td>
+                    <td>644345.784</td>
+                    <td>7094160.828</td>
+                    <td>84                    </td>
+                </tr>
+
+                <tr>
+                    <td>Victoriano</td>
+                    <td>Martínez</td>
+                    <td>1943021</td>
+                    <td>208</td>
+                    <td>Hombre</td>
+                    <td>73</td>
+                    <td>Primero</td>
+                    <td>2 de Marzo</td>
+                    <td>6.8454</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>2</td>
+                    <td>NULL</td>
+                    <td>644670.7584</td>
+                    <td>7093925.094</td>
+                    <td>221                    </td>
+                </tr>
+
+                <tr>
+                    <td>Teleforo</td>
+                    <td>Caballero</td>
+                    <td>2907754</td>
+                    <td>233</td>
+                    <td>Hombre</td>
+                    <td>65</td>
+                    <td>Cuarto</td>
+                    <td>San Miguelito</td>
+                    <td>8.9678</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>100</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646460.1125</td>
+                    <td>7091715.05</td>
+                    <td>21                    </td>
+                </tr>
+
+                <tr>
+                    <td>Daniel</td>
+                    <td>Duarte</td>
+                    <td>1412099</td>
+                    <td>172</td>
+                    <td>Hombre</td>
+                    <td>50</td>
+                    <td>Tercero</td>
+                    <td>2 de Marzo</td>
+                    <td>9.3506</td>
+                    <td>NULL</td>
+                    <td>2.5</td>
+                    <td>0.5</td>
+                    <td>120</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>0.5</td>
+                    <td>644659.3073</td>
+                    <td>7093819.914</td>
+                    <td>91                    </td>
+                </tr>
+
+                <tr>
+                    <td>Melanio</td>
+                    <td>Franco</td>
+                    <td>2595045</td>
+                    <td>NULL</td>
+                    <td>Hombre</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>San Sebastián</td>
+                    <td>6.0002</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>50</td>
+                    <td>NULL</td>
+                    <td>2</td>
+                    <td>0.5</td>
+                    <td>646421.052</td>
+                    <td>7095121.186</td>
+                    <td>159                    </td>
+                </tr>
+
+                <tr>
+                    <td>Imaculada</td>
+                    <td>Vera</td>
+                    <td>161</td>
+                    <td>161</td>
+                    <td>Mujer</td>
+                    <td>62</td>
+                    <td>Segundo</td>
+                    <td>San Miguelito</td>
+                    <td>21.9956</td>
+                    <td>0.25</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>.</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646836.4896</td>
+                    <td>7091286.26</td>
+                    <td>25                    </td>
+                </tr>
+
+                <tr>
+                    <td>Martin</td>
+                    <td>Fleitas</td>
+                    <td>2998585</td>
+                    <td>132</td>
+                    <td>Hombre</td>
+                    <td>51</td>
+                    <td>Tercero</td>
+                    <td>San Miguelito</td>
+                    <td>7.5514</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646457.157833</td>
+                    <td>7091953.90721</td>
+                    <td>26                    </td>
+                </tr>
+
+                <tr>
+                    <td>Marcos</td>
+                    <td>Ríos</td>
+                    <td>4061228</td>
+                    <td>154</td>
+                    <td>Hombre</td>
+                    <td>37</td>
+                    <td>Sexto</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.1185</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>90</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>0.5</td>
+                    <td>647470.0115</td>
+                    <td>7095045.782</td>
+                    <td>227                    </td>
+                </tr>
+
+                <tr>
+                    <td>Cipriano</td>
+                    <td>Alfonso</td>
+                    <td>2693129</td>
+                    <td>131</td>
+                    <td>Mujer</td>
+                    <td>49</td>
+                    <td>Cuarto</td>
+                    <td>San Miguelito</td>
+                    <td>12.3431</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646424.97972</td>
+                    <td>7092053.99807</td>
+                    <td>28                    </td>
+                </tr>
+
+                <tr>
+                    <td>Crispin</td>
+                    <td>Martínez</td>
+                    <td>2981340</td>
+                    <td>236</td>
+                    <td>Hombre</td>
+                    <td>42</td>
+                    <td>Sexto</td>
+                    <td>2 de Marzo</td>
+                    <td>13.3894</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>NULL</td>
+                    <td>5</td>
+                    <td>0.5</td>
+                    <td>644641.9375</td>
+                    <td>7094050.237</td>
+                    <td>96                    </td>
+                </tr>
+
+                <tr>
+                    <td>Isabelino</td>
+                    <td>Ríos</td>
+                    <td>1575194</td>
+                    <td>117</td>
+                    <td>Hombre</td>
+                    <td>54</td>
+                    <td>Sexto</td>
+                    <td>San Miguelito</td>
+                    <td>7.4735</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>150</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>NULL</td>
+                    <td>647629.3366</td>
+                    <td>7092093.517</td>
+                    <td>29                    </td>
+                </tr>
+
+                <tr>
+                    <td>Efrain</td>
+                    <td>Duarte</td>
+                    <td>6227547</td>
+                    <td>NULL</td>
+                    <td>Hombre</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>ka'aguy Pora</td>
+                    <td>30.8418</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0.25</td>
+                    <td>210</td>
+                    <td>0.5</td>
+                    <td>5</td>
+                    <td>0.5</td>
+                    <td>644412.454063</td>
+                    <td>7093214.12538</td>
+                    <td>230                    </td>
+                </tr>
+
+                <tr>
+                    <td>Francisco</td>
+                    <td>Morel</td>
+                    <td>4111875</td>
+                    <td>204</td>
+                    <td>Hombre</td>
+                    <td>41</td>
+                    <td>Segundo</td>
+                    <td>San Miguelito</td>
+                    <td>67.5221</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>648083.0379</td>
+                    <td>7089974.156</td>
+                    <td>231                    </td>
+                </tr>
+
+                <tr>
+                    <td>Rosalino</td>
+                    <td>Llanes</td>
+                    <td>4549047</td>
+                    <td>225</td>
+                    <td>Hombre</td>
+                    <td>35</td>
+                    <td>Cuarto</td>
+                    <td>San Miguelito</td>
+                    <td>22.2483</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>50</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646674.366521</td>
+                    <td>7091527.35862</td>
+                    <td>31                    </td>
+                </tr>
+
+                <tr>
+                    <td>Juan</td>
+                    <td>Romero</td>
+                    <td>1914804</td>
+                    <td>149</td>
+                    <td>Hombre</td>
+                    <td>62</td>
+                    <td>Segundo</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.057</td>
+                    <td>NULL</td>
+                    <td>2</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647835.8479</td>
+                    <td>7094786.7</td>
+                    <td>99                    </td>
+                </tr>
+
+                <tr>
+                    <td>Blas</td>
+                    <td>Sanabria</td>
+                    <td>2785576</td>
+                    <td>173</td>
+                    <td>Hombre</td>
+                    <td>51</td>
+                    <td>Quinto</td>
+                    <td>2 de Marzo</td>
+                    <td>6.6846</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>NULL</td>
+                    <td>644486.6688</td>
+                    <td>7094118.113</td>
+                    <td>101                    </td>
+                </tr>
+
+                <tr>
+                    <td>Inocencio</td>
+                    <td>Ruiz</td>
+                    <td>1221386</td>
+                    <td>NULL</td>
+                    <td>Hombre</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>San Sebastián</td>
+                    <td>12.1704</td>
+                    <td>0.5</td>
+                    <td>2</td>
+                    <td>0.5</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>647105.9515</td>
+                    <td>7095728.34</td>
+                    <td>236                    </td>
+                </tr>
+
+                <tr>
+                    <td>Edgar Francisco</td>
+                    <td>Fernández</td>
+                    <td>4061152</td>
+                    <td>212</td>
+                    <td>Hombre</td>
+                    <td>35</td>
+                    <td>Sexto</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.8866</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>90</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647619.0</td>
+                    <td>7094481.0</td>
+                    <td>102                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ignacio</td>
+                    <td>Garay</td>
+                    <td>2300340</td>
+                    <td>112</td>
+                    <td>Hombre</td>
+                    <td>62</td>
+                    <td>Quinto</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.1168</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>647197.0</td>
+                    <td>7095703.0</td>
+                    <td>237                    </td>
+                </tr>
+
+                <tr>
+                    <td>Joaquín</td>
+                    <td>Torales</td>
+                    <td>3807903</td>
+                    <td>186</td>
+                    <td>Hombre</td>
+                    <td>38</td>
+                    <td>Tercero</td>
+                    <td>San Miguelito</td>
+                    <td>28.6695</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>200</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646568.114864</td>
+                    <td>7091812.06228</td>
+                    <td>37                    </td>
+                </tr>
+
+                <tr>
+                    <td>Roberto</td>
+                    <td>Romero</td>
+                    <td>3951774</td>
+                    <td>194</td>
+                    <td>Hombre</td>
+                    <td>39</td>
+                    <td>Sexto</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.5163</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647342.0</td>
+                    <td>7095809.0</td>
+                    <td>238                    </td>
+                </tr>
+
+                <tr>
+                    <td>Eliodoro</td>
+                    <td>Torales</td>
+                    <td>3004882</td>
+                    <td>146</td>
+                    <td>Hombre</td>
+                    <td>67</td>
+                    <td>Segundo</td>
+                    <td>San Miguelito</td>
+                    <td>12.5001</td>
+                    <td>0.5</td>
+                    <td>3</td>
+                    <td>NULL</td>
+                    <td>200</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>0.25</td>
+                    <td>646506.435153</td>
+                    <td>7092070.98753</td>
+                    <td>39                    </td>
+                </tr>
+
+                <tr>
+                    <td>Saturnino</td>
+                    <td>Lombardo</td>
+                    <td>3766897</td>
+                    <td>NULL</td>
+                    <td>Hombre</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.3402</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>648369.875</td>
+                    <td>7096052.237</td>
+                    <td>174                    </td>
+                </tr>
+
+                <tr>
+                    <td>Candido</td>
+                    <td>Sánchez</td>
+                    <td>10000002</td>
+                    <td>NULL</td>
+                    <td>Hombre</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>1ro de Marzo</td>
+                    <td>5.9792</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>648274.2438</td>
+                    <td>7094645.494</td>
+                    <td>107                    </td>
+                </tr>
+
+                <tr>
+                    <td>José de Jesús</td>
+                    <td>Bogado</td>
+                    <td>152</td>
+                    <td>152</td>
+                    <td>Hombre</td>
+                    <td>65</td>
+                    <td>Segundo</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.3156</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>50</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>648046.2734</td>
+                    <td>7095714.622</td>
+                    <td>175                    </td>
+                </tr>
+
+                <tr>
+                    <td>Juan Francisco</td>
+                    <td>Barrios</td>
+                    <td>2818581</td>
+                    <td>205</td>
+                    <td>Hombre</td>
+                    <td>65</td>
+                    <td>Segundo</td>
+                    <td>San Miguelito</td>
+                    <td>10.6264</td>
+                    <td>0.5</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>155</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>646850.576</td>
+                    <td>7091363.6</td>
+                    <td>244                    </td>
+                </tr>
+
+                <tr>
+                    <td>Luciano</td>
+                    <td>Fernández</td>
+                    <td>2212342</td>
+                    <td>155</td>
+                    <td>Hombre</td>
+                    <td>40</td>
+                    <td>Tercero</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.6131</td>
+                    <td>0.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>150</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647678.0</td>
+                    <td>7094569.0</td>
+                    <td>110                    </td>
+                </tr>
+
+                <tr>
+                    <td>Pablina</td>
+                    <td>Zarate</td>
+                    <td>6865821</td>
+                    <td>177</td>
+                    <td>Mujer</td>
+                    <td>45</td>
+                    <td>Segundo</td>
+                    <td>San Miguelito</td>
+                    <td>5.7649</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>50</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647516.1792</td>
+                    <td>7090569.896</td>
+                    <td>246                    </td>
+                </tr>
+
+                <tr>
+                    <td>Pelagia</td>
+                    <td>Ibarra</td>
+                    <td>179</td>
+                    <td>179</td>
+                    <td>Mujer</td>
+                    <td>44</td>
+                    <td>Primero</td>
+                    <td>San Sebastián</td>
+                    <td>13.6204</td>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646862.5309</td>
+                    <td>7095523.958</td>
+                    <td>180                    </td>
+                </tr>
+
+                <tr>
+                    <td>Graciela</td>
+                    <td>Acosta</td>
+                    <td>4778809</td>
+                    <td>NULL</td>
+                    <td>Mujer</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>San Sebastián</td>
+                    <td>12.8194</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>NULL</td>
+                    <td>646182.2099</td>
+                    <td>7096267.814</td>
+                    <td>182                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mateo</td>
+                    <td>Acosta</td>
+                    <td>2643692</td>
+                    <td>110</td>
+                    <td>Hombre</td>
+                    <td>45</td>
+                    <td>Quinto</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.2765</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>140</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>648116.0</td>
+                    <td>7096444.0</td>
+                    <td>185                    </td>
+                </tr>
+
+                <tr>
+                    <td>Bernardino</td>
+                    <td>Torales</td>
+                    <td>4061134</td>
+                    <td>227</td>
+                    <td>Hombre</td>
+                    <td>43</td>
+                    <td>Tercero</td>
+                    <td>San Miguelito</td>
+                    <td>17.3896</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>646305.5375</td>
+                    <td>7092513.088</td>
+                    <td>252                    </td>
+                </tr>
+
+                <tr>
+                    <td>Matildo</td>
+                    <td>Romero</td>
+                    <td>2430740</td>
+                    <td>199</td>
+                    <td>Hombre</td>
+                    <td>40</td>
+                    <td>Sexto</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.1339</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647664.142894</td>
+                    <td>7094831.68699</td>
+                    <td>119                    </td>
+                </tr>
+
+                <tr>
+                    <td>Miriam</td>
+                    <td>Torales</td>
+                    <td>5983156</td>
+                    <td>NULL</td>
+                    <td>Mujer</td>
+                    <td>NULL</td>
+                    <td>SD</td>
+                    <td>San Sebastián</td>
+                    <td>5.2031</td>
+                    <td>0.5</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>100</td>
+                    <td>0.5</td>
+                    <td>2</td>
+                    <td>NULL</td>
+                    <td>646115.723278</td>
+                    <td>7096381.12494</td>
+                    <td>188                    </td>
+                </tr>
+
+                <tr>
+                    <td>Bartolomé</td>
+                    <td>Maciel</td>
+                    <td>4060225</td>
+                    <td>231</td>
+                    <td>Hombre</td>
+                    <td>65</td>
+                    <td>SD</td>
+                    <td>San Miguelito</td>
+                    <td>8.6763</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>646006.646453</td>
+                    <td>7093126.2239</td>
+                    <td>56                    </td>
+                </tr>
+
+                <tr>
+                    <td>Costancio</td>
+                    <td>González</td>
+                    <td>1100239</td>
+                    <td>134</td>
+                    <td>Hombre</td>
+                    <td>55</td>
+                    <td>Tercero</td>
+                    <td>1ro de Marzo</td>
+                    <td>9.5645</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>0.5</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647846.35</td>
+                    <td>7096626.237</td>
+                    <td>192                    </td>
+                </tr>
+
+                <tr>
+                    <td>José</td>
+                    <td>Morel</td>
+                    <td>2945122</td>
+                    <td>167</td>
+                    <td>Hombre</td>
+                    <td>55</td>
+                    <td>Tercero</td>
+                    <td>2 de Marzo</td>
+                    <td>7.5784</td>
+                    <td>2.5</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>644137.7584</td>
+                    <td>7094659.408</td>
+                    <td>129                    </td>
+                </tr>
+
+                <tr>
+                    <td>Alcides</td>
+                    <td>Benítez</td>
+                    <td>1879201</td>
+                    <td>181</td>
+                    <td>Hombre</td>
+                    <td>41</td>
+                    <td>Sexto</td>
+                    <td>San Sebastián</td>
+                    <td>7.9033</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>NULL</td>
+                    <td>50</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>NULL</td>
+                    <td>647598.417</td>
+                    <td>7096874.847</td>
+                    <td>200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+  </div>
+</body>
+
+</html>

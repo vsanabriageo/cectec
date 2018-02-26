@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="js/leaflet-search.js"></script>
+        <script src="data/AESTUDIO_1.js"></script>
+        <script src="data/Lotes_Asentamiento_2.js"></script>
+        <script src="data/LotesdeFamilias_3.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[-26.3100377936,-55.5987310773],[-26.2331200852,-55.4754546895]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        L.control.locate().addTo(map);
+        var measureControl = new L.Control.Measure({
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 28
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+        }
+        var img_ST2_naturalcolor_0 = 'data/ST2_naturalcolor_0.png';
+        var img_bounds_ST2_naturalcolor_0 = [[-26.309604304,-55.5890610198],[-26.2182075435,-55.4290249556]];
+        var overlay_ST2_naturalcolor_0 = new L.imageOverlay(img_ST2_naturalcolor_0, img_bounds_ST2_naturalcolor_0);
+        bounds_group.addLayer(overlay_ST2_naturalcolor_0);
+        map.addLayer(overlay_ST2_naturalcolor_0);
+        function pop_AESTUDIO_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PROYECTO'] !== null ? Autolinker.link(String(feature.properties['PROYECTO'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['SUP_HA'] !== null ? Autolinker.link(String(feature.properties['SUP_HA'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_AESTUDIO_1_0() {
+            return {
+                pane: 'pane_AESTUDIO_1',
+                opacity: 1,
+                color: 'rgba(172,22,22,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_AESTUDIO_1');
+        map.getPane('pane_AESTUDIO_1').style.zIndex = 401;
+        map.getPane('pane_AESTUDIO_1').style['mix-blend-mode'] = 'normal';
+        var layer_AESTUDIO_1 = new L.geoJson(json_AESTUDIO_1, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_AESTUDIO_1',
+            onEachFeature: pop_AESTUDIO_1,
+            style: style_AESTUDIO_1_0,
+        });
+        bounds_group.addLayer(layer_AESTUDIO_1);
+        map.addLayer(layer_AESTUDIO_1);
+        function pop_Lotes_Asentamiento_2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ID'] !== null ? Autolinker.link(String(feature.properties['ID'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['LOCALIDAD'] !== null ? Autolinker.link(String(feature.properties['LOCALIDAD'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['LOTE_AGR'] !== null ? Autolinker.link(String(feature.properties['LOTE_AGR'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['MZ_AGR'] !== null ? Autolinker.link(String(feature.properties['MZ_AGR'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['SUP_HA'] !== null ? Autolinker.link(String(feature.properties['SUP_HA'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Lotes_Asentamiento_2_0() {
+            return {
+                pane: 'pane_Lotes_Asentamiento_2',
+                opacity: 1,
+                color: 'rgba(161,161,161,0.752941)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(97,35,144,0.292318270588)',
+            }
+        }
+        map.createPane('pane_Lotes_Asentamiento_2');
+        map.getPane('pane_Lotes_Asentamiento_2').style.zIndex = 402;
+        map.getPane('pane_Lotes_Asentamiento_2').style['mix-blend-mode'] = 'normal';
+        var layer_Lotes_Asentamiento_2 = new L.geoJson(json_Lotes_Asentamiento_2, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_Lotes_Asentamiento_2',
+            onEachFeature: pop_Lotes_Asentamiento_2,
+            style: style_Lotes_Asentamiento_2_0,
+        });
+        bounds_group.addLayer(layer_Lotes_Asentamiento_2);
+        map.addLayer(layer_Lotes_Asentamiento_2);
+        function pop_LotesdeFamilias_3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">NOMBRE</th>\
+                        <td>' + (feature.properties['NOMBRE'] !== null ? Autolinker.link(String(feature.properties['NOMBRE'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">APELLIDO</th>\
+                        <td>' + (feature.properties['APELLIDO'] !== null ? Autolinker.link(String(feature.properties['APELLIDO'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CIN</th>\
+                        <td>' + (feature.properties['CIN'] !== null ? Autolinker.link(String(feature.properties['CIN'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Nro_ENCUES</th>\
+                        <td>' + (feature.properties['Nro_ENCUES'] !== null ? Autolinker.link(String(feature.properties['Nro_ENCUES'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">LOCALIDAD</th>\
+                        <td>' + (feature.properties['LOCALIDAD'] !== null ? Autolinker.link(String(feature.properties['LOCALIDAD'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">SUP_HA</th>\
+                        <td>' + (feature.properties['SUP_HA'] !== null ? Autolinker.link(String(feature.properties['SUP_HA'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">AG_FOREST</th>\
+                        <td>' + (feature.properties['AG_FOREST'] !== null ? Autolinker.link(String(feature.properties['AG_FOREST'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">SILVO_PAST</th>\
+                        <td>' + (feature.properties['SILVO_PAST'] !== null ? Autolinker.link(String(feature.properties['SILVO_PAST'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">ENR_BOSQ</th>\
+                        <td>' + (feature.properties['ENR_BOSQ'] !== null ? Autolinker.link(String(feature.properties['ENR_BOSQ'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">PCHIDRO</th>\
+                        <td>' + (feature.properties['PCHIDRO'] !== null ? Autolinker.link(String(feature.properties['PCHIDRO'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CN_T</th>\
+                        <td>' + (feature.properties['CN_T'] !== null ? Autolinker.link(String(feature.properties['CN_T'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">APICULT</th>\
+                        <td>' + (feature.properties['APICULT'] !== null ? Autolinker.link(String(feature.properties['APICULT'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">MSAV</th>\
+                        <td>' + (feature.properties['MSAV'] !== null ? Autolinker.link(String(feature.properties['MSAV'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_LotesdeFamilias_3_0() {
+            return {
+                pane: 'pane_LotesdeFamilias_3',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(227,199,38,1.0)',
+            }
+        }
+        map.createPane('pane_LotesdeFamilias_3');
+        map.getPane('pane_LotesdeFamilias_3').style.zIndex = 403;
+        map.getPane('pane_LotesdeFamilias_3').style['mix-blend-mode'] = 'normal';
+        var layer_LotesdeFamilias_3 = new L.geoJson(json_LotesdeFamilias_3, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_LotesdeFamilias_3',
+            onEachFeature: pop_LotesdeFamilias_3,
+            style: style_LotesdeFamilias_3_0,
+        });
+        bounds_group.addLayer(layer_LotesdeFamilias_3);
+        map.addLayer(layer_LotesdeFamilias_3);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/LotesdeFamilias_3.png" /> Lotes de Familias': layer_LotesdeFamilias_3,'<img src="legend/Lotes_Asentamiento_2.png" /> Lotes_Asentamiento': layer_Lotes_Asentamiento_2,'<img src="legend/AESTUDIO_1.png" /> AESTUDIO': layer_AESTUDIO_1,"ST2_naturalcolor": overlay_ST2_naturalcolor_0,}).addTo(map);
+        setBounds();
+        map.addControl(new L.Control.Search({
+            layer: layer_LotesdeFamilias_3,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'NOMBRE'}));
+        L.ImageOverlay.include({
+            getBounds: function () {
+                return this._bounds;
+            }
+        });
+        </script>
+    </body>
+</html>
